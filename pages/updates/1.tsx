@@ -5,5 +5,5 @@ import HeadCard from '../../components/HeadCard'
 
 
 export default function update1() {
-  return <HeadCard />
+  return <Blog />
 }

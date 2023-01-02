@@ -14,7 +14,7 @@ export default function HeadCardBlank() {
 
 
         <div className="h-full ">
-          <div className="bg-red-500 grid place-content-center h-full w-full ">
+          <div className="bg-red-100 grid place-content-center h-full w-full ">
             <Image
               className=" invisible"
               src={"/Title.gif"}

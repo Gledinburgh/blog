@@ -8,41 +8,59 @@ import UpdateCard1 from '../components/UpdateCard1'
 
 export default function Layout({ children }: any) {
   return (
-    <div className='flex flex-col-2 max-w-screen'>
+    <div className=''>
+      <HeadCard />
+      <div className='flex flex-col-3 max-w-screen'>
 
+        <div className='grow hidden shrink-0 w-0 flex-initial md:block bg-zinc-100' >
+          <HeadCardBlank />
+          <div className='border-l h-full  flex-col'>
 
-      <div className='max-w-screen-md w-[30rem]  grow flex flex-row  justify-center'>
-        <div className='w-full '>
-          <HeadCard />
-          {children}
-          {/* <UpdateCard1 x={1} />
+            <div className='border-y h-56 grid grid-cols-1 gap-4 content-center'>
+              <div className='text-center '>
+
+              </div>
+
+              <div className='h-full'>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className='max-w-screen-md w-[30rem]  grow flex flex-row  justify-center'>
+          <div className='w-full '>
+            {children}
+            {/* <UpdateCard1 x={1} />
           {
             [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => <Card x={x} />)
           } */}
 
-        </div>
-      </div>
-
-      <div className='grow hidden shrink-0 w-[20rem] mdlg:block bg-zinc-100' >
-        <HeadCardBlank />
-        <div className='border-l h-full  flex-col'>
-
-          <div className='border-y h-56 grid grid-cols-1 gap-4 content-center'>
-            <div className='text-center '>
-              Welcome to <b>Tails From The Abando</b>&apos;s Blog Experiment
-            </div>
-
-            <div className='h-full'>
-
-            </div>
           </div>
-
         </div>
+
+        <div className='grow hidden shrink-0 w-0 md:block bg-zinc-100' >
+          <HeadCardBlank />
+          <div className='border-l h-full  flex-col'>
+
+            <div className='border-y h-56 grid grid-cols-1 gap-4 content-center'>
+              <div className='text-center '>
+
+              </div>
+
+              <div className='h-full'>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
       </div>
-
-
-
-
     </div>
 
 

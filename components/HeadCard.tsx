@@ -25,7 +25,7 @@ export default function HeadCard() {
           </div>
         </div>
 
-        <nav className="mt-4 ml-5 flex flex-row flex-nowrap w-full">
+        <nav className="mt-4 ml-5 items-center justify-center align-middle content-center flex flex-row flex-nowrap w-full">
 
 
           <Link href='/'>

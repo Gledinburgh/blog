@@ -3,16 +3,17 @@ import Image from "next/image"
 export default function McAllenPost() {
 
   return (
-    <div className="text-slate-800 m-6">
+    <div className=" text-slate-800 m-5">
       <div className="h-32"></div>
 
       <div className=" text-3xl font-extrabold"> The Holy Relapse Takes McAllen Texas </div>
 
       <div className=" text-slate-500 text-xl font-medium mt-3"> We took the second printing of The Holy Relapse am maecenas  </div>
-      <div className="my-10 justify-center">
-        <div className="aspect-[13/8] overflow-hidden relative  justify-center">
+      <div className="relative overflowhidden my-10 justify-center">
+        <div className="aspect-[13/8] overflow-hidden relative justify-center">
           <Image
-            className="object-cover h-full w-full "
+
+            className="object-cover"
             src={"/mcallen.png"}
             alt={"Holy Relapse Photo"}
             fill
@@ -40,7 +41,7 @@ export default function McAllenPost() {
                 object-fit='cover'
               />
             </div>
-            <div className="my-2 text-center text-sm text-slate-600">Collection of photos in front of Mauro's mural <br /> (Juntos Co-Op 2022)</div>
+            <div className="my-2 text-center text-sm text-slate-600">Collection of photos in front of Mauro&apos;s mural <br /> (Juntos Co-Op 2022)</div>
 
           </div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

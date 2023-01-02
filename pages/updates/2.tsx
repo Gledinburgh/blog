@@ -6,21 +6,7 @@ import McAllenPost from '../../components/McallenPost'
 
 
 export default function update1() {
-  return (
+  return <McAllenPost />
 
 
-
-    <div>
-      <div className='flex flex-row  justify-center'>
-        <div className=' w-screen md:w-96'>
-          <HeadCard />
-
-          <McAllenPost />
-
-        </div>
-      </div>
-    </div>
-
-
-  )
 }

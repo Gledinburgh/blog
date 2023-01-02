@@ -19,7 +19,7 @@ export default function TheTwinsPost() {
             object-fit='cover'
           />
         </div>
-        <div className="my-2 text-center text-sm text-slate-600">Panel from "The Railyard Ghost" (2019)</div>
+        <div className="my-2 text-center text-sm text-slate-600">Panel from &quot;The Railyard Ghost&quot; (2019)</div>
 
       </div>
       <div className="text-lg font-serif">

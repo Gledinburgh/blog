@@ -38,7 +38,7 @@ export default function PawnShopPost() {
               object-fit='cover'
             />
           </div>
-          <div className="my-2 text-center text-sm text-slate-600">Panel From "The Holy Relapse" (2021)</div>
+          <div className="my-2 text-center text-sm text-slate-600">Panel From &quot;The Holy Relapse&quot; (2021)</div>
         </div>
 
         <ul role="list" >

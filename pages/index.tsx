@@ -12,7 +12,7 @@ export default function Home() {
 
       <UpdateCard1 x={1} />
       {
-        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => <Card x={x} />)
+        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => < Card key={'Card' + x} x={x} />)
       }
 
     </>

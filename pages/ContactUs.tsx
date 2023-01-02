@@ -12,7 +12,7 @@ export default function ContactUs() {
 
     <>
       {
-        [1, 2, 3, 4].map((x) => <ContactCard x={x} />)
+        [1, 2, 3, 4].map((x) => <ContactCard key={'Contact' + x} x={x} />)
       }
     </>
 

@@ -1,6 +1,34 @@
 import Image from "next/image"
+import Parallax from 'parallax-js'
+import layer0 from '../public/parallax/pawnshop/pawnshop-0.webp'
+import layer1 from '../public/parallax/pawnshop/pawnshop-1.webp'
+import layer2 from '../public/parallax/pawnshop/pawnshop-2.webp'
+import layer3 from '../public/parallax/pawnshop/pawnshop-3.webp'
+import layer4 from '../public/parallax/pawnshop/pawnshop-4.webp'
+import layer5 from '../public/parallax/pawnshop/pawnshop-5.webp'
+import { MutableRefObject, SyntheticEvent, useEffect, useRef, useState } from 'react'
+
+
+
 
 export default function PawnShopPost() {
+
+  const containerRef = useRef(null)
+  const sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+
+  useEffect(() => {
+    console.log("useEffect: ParkContent")
+
+
+    const parallaxInstance = new Parallax(containerRef.current, { hoverOnly: true, relativeInput: true })
+
+    parallaxInstance.enable();
+    parallaxInstance.limit(100, 100)
+
+    return () => parallaxInstance.disable();
+  }, [])
+
 
   return (
     <div className="text-slate-800 m-6">
@@ -10,14 +38,48 @@ export default function PawnShopPost() {
 
       <div className=" text-slate-500 text-xl font-medium mt-3">A mystic store front</div>
       <div className="my-10 justify-center">
-        <div className="aspect-[13/8] overflow-hidden relative  justify-center">
-          <Image
-            className="object-cover h-full w-full "
-            src={"/pawnshop.png"}
-            alt={"Holy Relapse Photo"}
-            fill
-            object-fit='cover'
-          />
+        <div className="bg-slate-900 flex items-center justify-center overflow-hidden">
+
+
+
+          <div className="w-[110%] h-[110%]" ref={containerRef}>
+
+            <Image
+              data-depth={.2}
+              className="object-cover h-full w-full "
+              src={layer0}
+              alt={"Holy Relapse Photo"}
+              fill
+              sizes={sizes}
+              object-fit='cover'
+              priority
+            />
+            <Image
+              data-depth={.4}
+              className="object-cover h-full w-full "
+              src={layer1}
+              alt={"Holy Relapse Photo"}
+              priority
+              fill
+              sizes={sizes}
+              object-fit='cover'
+            />
+            <Image
+              data-depth={.8}
+              className="object-cover h-full w-full "
+              src={layer2}
+              alt={"Holy Relapse Photo"}
+              sizes={sizes}
+              fill
+              object-fit='cover'
+            />
+
+
+          </div>
+
+
+
+
         </div>
         <div className="text-center text-sm text-slate-600">The Houston street Pawn Shop (2022)</div>
 
@@ -52,17 +114,7 @@ export default function PawnShopPost() {
             •  ectetur adipiscing elit, sed do ei
           </li>
         </ul>
-        <div className="animate-eight  absolute h-200 w-200">
-          <Image
-            className="animate-bounce"
-            src={"/fly.webp"}
-            alt={"Holy Relapse Photo"}
-            width={100}
-            height={100}
 
-          />
-
-        </div>
         <br />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas ultricies mi eget mauris pharetra. Eu consequat ac felis donec. Facilisis leo vel fringilla est.
@@ -78,3 +130,4 @@ export default function PawnShopPost() {
   )
 
 }
+

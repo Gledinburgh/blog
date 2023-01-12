@@ -1,19 +1,22 @@
 
 import Blog from '../components/Blog'
 import Card from '../components/Card'
-import HeadCard from '../components/HeadCard'
-import HeadCardBlank from '../components/HeadCardBlank'
+import HeadCard from './Layout/Header/HeadCard'
 import UpdateCard1 from '../components/UpdateCard1'
+import MobileMenue from './Layout/Header/MobileMenu'
 
 
 export default function Layout({ children }: any) {
   return (
-    <div className=''>
+    <div className='relative'>
+
+
       <HeadCard />
+
+
       <div className='flex flex-col-3 max-w-screen'>
 
         <div className='grow hidden shrink-0 w-0 flex-initial md:block bg-zinc-100' >
-          <HeadCardBlank />
           <div className='border-l h-full  flex-col'>
 
             <div className='border-y h-56 grid grid-cols-1 gap-4 content-center'>
@@ -29,8 +32,8 @@ export default function Layout({ children }: any) {
           </div>
         </div>
 
-        <div className='max-w-screen-md w-[30rem]  grow flex flex-row  justify-center'>
-          <div className='w-full '>
+        <div className=' overflow-hidden max-w-screen-md w-[30rem]  grow flex flex-row  justify-center'>
+          <div className='relative w-full '>
             {children}
             {/* <UpdateCard1 x={1} />
           {
@@ -41,7 +44,6 @@ export default function Layout({ children }: any) {
         </div>
 
         <div className='grow hidden shrink-0 w-0 md:block bg-zinc-100' >
-          <HeadCardBlank />
           <div className='border-l h-full  flex-col'>
 
             <div className='border-y h-56 grid grid-cols-1 gap-4 content-center'>

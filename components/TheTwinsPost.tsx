@@ -22,14 +22,30 @@ export default function TheTwinsPost() {
         <div className="my-2 text-center text-sm text-slate-600">Panel from &quot;The Railyard Ghost&quot; (2019)</div>
 
       </div>
-      <div className="text-lg font-serif">
+      <div className="relative text-lg font-serif">
         <p>
-          Fuzed together durring the atomic blast, Lorem and ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas ultricies mi eget mauris pharetra. Eu consequat ac felis donec. Facilisis leo vel fringilla est. <a className=" underline text-blue-600" href=""> Utfaucibus.com</a> Ut faucibus integer. Ut pharetra sit amet aliquam id diam maecenas. Urna porttitor rhoncus dolor purus non enim praesent element
+          Fuzed together durring the atomic blast, Lorem and ipsum dolor sit amet, consectetur adipiscing elit,
+
+          <div className="absolute z-10 animate-eight">
+            <div className=" animate-flip h-200 w-200">
+              <Image
+                className=" animate-bounce"
+                src={"/fly.webp"}
+                alt={"Holy Relapse Photo"}
+                width={100}
+                height={100}
+              />
+            </div>
+          </div>
+
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas ultricies mi eget mauris pharetra. Eu consequat ac felis donec. Facilisis leo vel fringilla est. <a className=" underline text-blue-600" href=""> Utfaucibus.com</a> Ut faucibus integer. Ut pharetra sit amet aliquam id diam maecenas. Urna porttitor rhoncus dolor purus non enim praesent element
         </p>
+
+
         <br />
         <div className="relative w-full h-32">
           <Image
-            className="object-cover h-full w-full "
+            className=" object-cover h-full w-full "
             src={"/twins2.png"}
             alt={"Holy Relapse Photo"}
             fill

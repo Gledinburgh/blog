@@ -11,16 +11,22 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite',
-        'eight': 'float 15s infinite linear',
+        'eight': 'float 18s infinite linear',
+        'flip': 'flip 18s infinite linear',
       },
       keyframes: {
-        roll: {
-          '100%': { transform: ' translate' }
-        },
         float: {
-          '0%': { transform: 'translateX(-20vw) translateY(0)' },
-          '100%': { transform: 'translateX(100vw)' }
-        }
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(400%)' },
+        },
+        flip: {
+          '0%': { transform: 'scaleX(1) ' },
+          '50%': { transform: 'scaleX(1)' },
+          '51%': { transform: 'scaleX(-1) ' },
+          '100%': { transform: 'scaleX(-1)' },
+
+        },
+
       }
     },
 

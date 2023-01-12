@@ -14,7 +14,7 @@ export default function HeadCard() {
   const [expanded, setExpanded] = useState(false);
   const scrollDirection = useScrollDirection();
 
-  const all = "z-[15] bg-red-200 w-full "
+  const all = "z-[15] bg-red-500 w-full "
   const height = " h-28 md:h-56 "
   const small = ` fixed  ${!expanded && scrollDirection === "down" ? " -top-40" : "top-0"} transition-all duration-500 `
   const large = " mdlg:static mdlg:top-0 "

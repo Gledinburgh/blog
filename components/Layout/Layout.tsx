@@ -1,9 +1,9 @@
 
-import Blog from '../components/Blog'
-import Card from '../components/Card'
-import HeadCard from './Layout/Header/HeadCard'
-import UpdateCard1 from '../components/UpdateCard1'
-import MobileMenue from './Layout/Header/MobileMenu'
+import Blog from '../Blog'
+import Card from '../Card'
+import HeadCard from './Header/HeadCard'
+import UpdateCard1 from '../UpdateCard1'
+import MobileMenue from './Header/MobileMenu'
 
 
 export default function Layout({ children }: any) {

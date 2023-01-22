@@ -1,53 +1,42 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link";
+import { FaTiktok, FaInstagram } from 'react-icons/fa'
+import { GrMailOption } from 'react-icons/gr'
 
-export default function ContactCard({ x }: { x: number }) {
+export default function GenericCard() {
+
+  const style = {
+    backgroundImage: "url(/mcallen1.png)",
+    backgroundPosition: "center"
+  }
+
 
   return (
-    <div className="text-slate-900 mx-5 max-h-48 h-48">
-      <div className="  h-full bg-zinc-50">
-        <div className="h-full mx-5 border-t">
+    <Link href={""}>
+      <div className="w-screen max-w-screen-md text-slate-800 hover:text-black hover:bg-white bg-zinc-50 h-40 md:h-56 rounded border-2 border-zinc-100 flex">
+        <div
+          className="grid content-center justify-center rounded-l h-auto w-1/4 overflow-hidden" title="Woman holding a mug">
+          <Image
+            className='rounded-full'
+            src={'https://picsum.photos/150/150'}
+            width={100}
+            height={100}
 
-
-          <div className='h-full flex flex-col-2 items-center'>
-
-
-            <div className=" overflow-hidden align-middle mr-10 w-1/4">
-              <Image
-                className='rounded-full'
-                src={'https://picsum.photos/150/150'}
-                width={100}
-                height={100}
-
-                alt=''
-              />
-            </div>
-
-            <div className='w-3/4 flex flex-row'>
-              < div className="" >
-                <div className=" text-lg font-bold">
-                  Tails From The Abando
-                </div>
-                <div>thisistheemail@gmail.com</div>
-                <div>@thisistheInsta</div>
-                <div>@thisistheTiktok</div>
-              </div >
-
-            </div>
-
-          </div>
-
-
-
-
-
-
-
-
+            alt=''
+          />
         </div>
+
+
+        <div className="w-3/4 p-4">
+          <div className="mb-8">
+            <h3 className="line-clamp-1 flex tracking-tighter font-bold text-md md:text-xl my-3">Mauro de la Tierra</h3>
+            <p className=" pt-[5%] inline-flex text-3xl w-full">
+              <span className=" mr-[10%] "><FaTiktok /></span>  <span className="mr-[10%]"><FaInstagram /></span>  <span className="mr-[10%]"><GrMailOption /></span>
+            </p>
+          </div>
+        </div>
+
       </div >
-    </div >
-
-
+    </Link >
   )
 }

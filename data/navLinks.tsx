@@ -5,15 +5,19 @@ export const nav = [
   },
   {
     "href": "/Updates",
-    "text": "Updates"
+    "text": "Blog"
   },
   {
     "href": "/ContactUs",
     "text": "Contact Us"
   },
+  // {
+  //   "href": "/Archive",
+  //   "text": "Archive"
+  // },
   {
-    "href": "/Archive",
-    "text": "Archive"
+    "href": "https://blacksneakers.bigcartel.com/",
+    "text": "Shop"
   }
 ]
 

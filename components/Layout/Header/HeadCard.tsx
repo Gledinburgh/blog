@@ -6,28 +6,28 @@ import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import LongNav from "./LongNav";
 import useScrollDirection from "../../../hooks/useScrollDirection";
-import useScrollToggle from "../../../hooks/useScrollToggle";
-
+import scrollToggle from "../../../hooks/scrollToggle";
 
 export default function HeadCard() {
 
   const [expanded, setExpanded] = useState(false);
   const scrollDirection = useScrollDirection();
 
-  const all = "z-[15] bg-red-500 w-full "
+  const all = "z-[15] w-full bg-repeat bg-[url('/BG.webp')]"
   const height = " h-28 md:h-56 "
   const small = ` fixed  ${!expanded && scrollDirection === "down" ? " -top-40" : "top-0"} transition-all duration-500 `
   const large = " mdlg:static mdlg:top-0 "
 
+
   useEffect(() => {
-    useScrollToggle(expanded)
-      , [expanded]
-  })
+    scrollToggle(expanded)
+
+  }, [expanded])
 
   return (
-    <div className="">
+    <div className='' >
 
-      <div className={height + "w-full bg-zinc-100 "}>
+      <div className={height + "w-full"}>
         <div className={height + all + small + large}>
 
           {/* --- Content --- */}
@@ -46,7 +46,7 @@ export default function HeadCard() {
             <div
               className="md:hidden grid place-content-center h-full w-1/4 "
               onClick={() => setExpanded(!expanded)}>
-              <Hamburger />
+              <Hamburger expanded={expanded} />
             </div>
 
           </div>
@@ -58,6 +58,10 @@ export default function HeadCard() {
 
         </div >
       </div>
-    </div>
+
+      <div className="hidden  mt-5 border-t-2 md:flex justify-center border-red-500">
+        <div className="h-2 bg-red-500 w-[20vh] md:w-[15vw]" ></div>
+      </div>
+    </div >
   )
 }
